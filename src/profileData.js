@@ -2,14 +2,12 @@
 
 export const profileData = {
   header: {
-    name: "Fadillah Siva, M.Cs.",
-    title: "Lecturer at UNS | Computer Vision Researcher | AI & LLM Specialist",
+    name: "Fadillah Siva",
+    title: "Lecturer | Computer Vision Researcher | AI & LLM Specialist",
     location: "Indonesia",
     emailWork: "fadillahsiva.work@gmail.com",
     emailResearch: "fadillahsiva.research@gmail.com",
     linkedin: "https://linkedin.com/in/fadillah-siva",
-    github: "https://github.com/", // Isi dengan link github Anda jika ada
-    scholar: "https://scholar.google.com/" // Isi dengan link scholar Anda jika ada
   },
   about: {
     summary: "I am an Academic and Computer Vision Researcher with a strong foundation in Feature Extraction and Pattern Recognition, currently serving as a Lecturer at Universitas Sebelas Maret (UNS). I graduated Cum Laude with a Master’s degree in Computer Science from Universitas Gadjah Mada (UGM).",
@@ -44,6 +42,12 @@ export const profileData = {
       company: "PT Telkom Indonesia (Riau)",
       period: "Feb 2022 – May 2022",
       desc: "Developed a GIS-based website to optimize network monitoring processes."
+    },
+    {
+      role: "Laboratory Assistant",
+      company: "UIN Maulana Malik Ibrahim",
+      period: "2021 – 2022",
+      desc: "Facilitated practical sessions for Data Structures, Info Systems, and OOP. Mentored students on complex concepts."
     }
   ],
   education: [
@@ -68,24 +72,48 @@ export const profileData = {
       doi: "10.23919/MVA65244.2025.11175077"
     },
     {
+      title: "Real-Time Fire Detection Using Hybrid Feature Extraction: Color, Texture, and Motion Analysis",
+      publisher: "IEICE Proceedings",
+      doi: "10.34385/proc.93.P1-7"
+    },
+    {
       title: "Feature Fusion for Advancing Land-Use Scene Classification",
       publisher: "SPIE (ICMVA 2025)",
       doi: "10.1117/12.3078902"
     },
     {
-      title: "Survei Metode Software Development Life Cycle dengan SLR",
+      title: "Survei Metode-Metode Software Development Life Cycle dengan Metode Systematic Literature Review",
       publisher: "ILKOMNIKA Journal",
       doi: "10.28926/ilkomnika.v5i2.447"
+    },
+    {
+      title: "Pemodelan Proses Bisnis Peternakan Ayam Petelur",
+      publisher: "Jurnal INFORMATIKA",
+      doi: "10.35316/jimi.v7i1.49-64"
     }
   ],
   projects: [
-    "Data Science Challenge with Python (CT CORP)",
-    "Data Engineer Challenge with SQL (Xeratic)",
-    "Customer Churn Prediction (Machine Learning)",
-    "Retail Data Exploration using R"
+    "Data Science Challenge with Python – CT CORP",
+    "Data Engineer Challenge with SQL – Xeratic",
+    "Customer Churn Prediction (Machine Learning) – DQLab",
+    "Data Analyst Project: Business Decision Research – DQLab",
+    "Project: Retail Data Exploration using R – DQLab",
+    "Data Science Project: COVID-19 Analysis (Global & ASEAN)"
   ],
   skills: [
     "Computer Vision", "Deep Learning", "Python (PyTorch/Scikit-Learn)", 
     "R (ggplot2)", "SQL", "Strategic Management", "Lecturing"
+  ],
+  organization: [
+    {
+      role: "Chairman",
+      name: "Himpunan Mahasiswa Pascasarjana Ilmu Komputer (HIMPASIKOM)",
+      period: "2025 – Present"
+    },
+    {
+      role: "Secretary",
+      name: "Himpunan Mahasiswa Pascasarjana Ilmu Komputer (HIMPASIKOM)",
+      period: "2024 – 2025"
+    }
   ]
 };

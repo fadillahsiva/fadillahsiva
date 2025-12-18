@@ -1,15 +1,16 @@
 // src/App.jsx
 import React, { useState, useEffect } from 'react';
 import { profileData } from './profileData';
-import { Mail, MapPin, Linkedin, Github, BookOpen, ExternalLink, Menu, X, ArrowUp, ChevronRight } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Github, BookOpen, ExternalLink, Menu, X, ArrowUp, ChevronRight, Users } from 'lucide-react';
+// Pastikan foto sudah ada di folder src/assets/profile.jpg
+import profilePic from './assets/profile.jpg'; 
 import './App.css';
 
 function App() {
-  const { header, about, interests, experience, education, publications, projects, skills } = profileData;
+  const { header, about, interests, experience, education, publications, projects, skills, organization } = profileData;
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Efek untuk navbar transparan saat di atas
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -58,10 +59,18 @@ function App() {
         </div>
       </nav>
 
-      {/* HERO SECTION */}
+      {/* HERO SECTION WITH PHOTO */}
       <header className="hero-section">
         <div className="hero-bg-pattern"></div>
         <div className="hero-content">
+          
+          {/* PROFILE PICTURE */}
+          <div className="profile-wrapper fade-in-up">
+            <div className="profile-frame">
+              <img src={profilePic} alt={header.name} className="profile-img" />
+            </div>
+          </div>
+
           <div className="hero-text fade-in-up">
             <span className="badge">Academic & Researcher</span>
             <h1>{header.name}</h1>
@@ -96,7 +105,6 @@ function App() {
             <h2>About & Vision</h2>
             <div className="line"></div>
           </div>
-          
           <div className="about-grid">
             <div className="about-text card">
               <p className="lead">{about.summary}</p>
@@ -105,7 +113,6 @@ function App() {
                 <p>{about.vision}</p>
               </div>
             </div>
-            
             <div className="interests-wrapper">
               <h3>Core Interests</h3>
               <div className="interests-list">
@@ -129,7 +136,6 @@ function App() {
             <h2>Professional Experience</h2>
             <div className="line"></div>
           </div>
-
           <div className="timeline-container">
             {experience.map((exp, index) => (
               <div key={index} className="timeline-card fade-in-on-scroll">
@@ -144,26 +150,45 @@ function App() {
           </div>
         </section>
 
-        {/* EDUCATION SECTION */}
+        {/* EDUCATION & ORGANIZATION SECTION */}
         <section id="education" className="section-padding">
-          <div className="section-header">
-            <h2>Education History</h2>
-            <div className="line"></div>
-          </div>
-          
-          <div className="education-grid">
-            {education.map((edu, index) => (
-              <div key={index} className="edu-card">
-                <div className="edu-icon"><BookOpen size={24} /></div>
-                <div className="edu-info">
-                  <h3>{edu.degree}</h3>
-                  <span className="edu-school">{edu.school}</span>
-                  <span className="edu-year">{edu.period}</span>
-                  <span className="edu-grade">{edu.grade}</span>
-                  {edu.note && <p className="edu-note">{edu.note}</p>}
-                </div>
+          <div className="grid-2-col">
+            <div>
+              <div className="section-header-left">
+                <h3>Education</h3>
               </div>
-            ))}
+              <div className="education-list">
+                {education.map((edu, index) => (
+                  <div key={index} className="edu-card-simple">
+                    <div className="edu-icon"><BookOpen size={20} /></div>
+                    <div>
+                      <h4>{edu.degree}</h4>
+                      <span className="edu-school">{edu.school}</span>
+                      <span className="edu-grade">{edu.grade}</span>
+                      <span className="edu-year-simple">{edu.period}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="section-header-left">
+                <h3>Organization</h3>
+              </div>
+              <div className="org-list">
+                {organization && organization.map((org, index) => (
+                  <div key={index} className="edu-card-simple">
+                     <div className="edu-icon"><Users size={20} /></div>
+                     <div>
+                        <h4>{org.role}</h4>
+                        <span className="edu-school">{org.name}</span>
+                        <span className="edu-year-simple">{org.period}</span>
+                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -173,7 +198,6 @@ function App() {
             <h2>Selected Publications</h2>
             <div className="line"></div>
           </div>
-
           <div className="pub-grid">
             {publications.map((pub, index) => (
               <a key={index} href={`https://doi.org/${pub.doi}`} target="_blank" rel="noreferrer" className="pub-card">
@@ -230,7 +254,6 @@ function App() {
         </div>
       </footer>
       
-      {/* Scroll to Top Button */}
       {isScrolled && (
         <button className="scroll-to-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <ArrowUp size={20} />
