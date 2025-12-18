@@ -249,32 +249,58 @@ function App() {
           </div>
         </section>
 
-        {/* PORTFOLIO & SKILLS SECTION */}
+        {/* CERTIFICATIONS & SKILLS SECTION */}
         <section id="portfolio" className="section-padding">
-          <div className="grid-2-col">
-            <div className="projects-column">
-              <div className="section-header-left">
-                <h3>Key Projects & Certifications</h3>
-              </div>
-              <ul className="project-list">
-                {projects.map((proj, index) => (
-                  <li key={index} className="project-item">
-                    <span className="bullet"></span> {proj}
-                  </li>
-                ))}
-              </ul>
+          <div className="section-header">
+            <h2>Certifications & Technical Proficiency</h2>
+            <div className="line"></div>
+          </div>
+
+          <div className="grid-2-col-reverse"> {/* Layout kolom */}
+            
+            {/* Kolom Kiri: Daftar Sertifikat */}
+            <div className="certs-column">
+              {profileData.certificates.map((group, index) => (
+                <div key={index} className="cert-group">
+                  <h3 className="cert-category-title">{group.category}</h3>
+                  <div className="cert-list">
+                    {group.items.map((cert, idx) => (
+                      <div key={idx} className="cert-item">
+                        <div className="cert-icon">
+                          <BookOpen size={16} />
+                        </div>
+                        <div className="cert-info">
+                          <span className="cert-title">{cert.title}</span>
+                          <span className="cert-issuer">{cert.issuer}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div className="skills-column">
-              <div className="section-header-left">
+            {/* Kolom Kanan: Skills Cloud (Tetap dipertahankan agar layout seimbang) */}
+            <div className="skills-column-sticky">
+              <div className="skills-box">
                 <h3>Technical Arsenal</h3>
+                <div className="skills-cloud">
+                  {skills.map((skill, index) => (
+                    <span key={index} className="skill-tag">{skill}</span>
+                  ))}
+                </div>
               </div>
-              <div className="skills-cloud">
-                {skills.map((skill, index) => (
-                  <span key={index} className="skill-tag">{skill}</span>
-                ))}
+              
+              {/* Tambahan Info Unduh CV (Opsional, agar kolom kanan tidak kosong) */}
+              <div className="cv-download-box" style={{marginTop: '2rem'}}>
+                <h3>Interested in collaboration?</h3>
+                <p>Feel free to reach out for research or professional inquiries.</p>
+                <a href={`mailto:${header.emailWork}`} className="btn btn-primary" style={{width: '100%', justifyContent: 'center'}}>
+                  Contact Me
+                </a>
               </div>
             </div>
+
           </div>
         </section>
 
