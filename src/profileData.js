@@ -2,11 +2,11 @@
 
 // Gambar Placeholder (Ganti link ini dengan gambar Anda nanti di folder src/assets/)
 // Contoh: import fireImg from './assets/fire-detection.png'; lalu gunakan 'image: fireImg'
-const placeholderFire1 = "/assets/fire1.png";
-const placeholderFire2 = "/assets/fire2.png";
-const placeholderMap = "/assets/land.png";
-const placeholderSDLC = "/assets/sdlc.png";
-const placeholderFarm = "/assets/petelur.png";
+const placeholderFire1 = "./assets/fire1.png";
+const placeholderFire2 = "./assets/fire2.png";
+const placeholderMap = "./assets/land.png";
+const placeholderSDLC = "./assets/sdlc.png";
+const placeholderFarm = "./assets/petelur.png";
 
 export const profileData = {
   header: {
