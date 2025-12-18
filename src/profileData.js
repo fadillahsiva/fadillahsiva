@@ -65,33 +65,37 @@ export const profileData = {
       grade: "GPA: 3.71/4.00 (Cum Laude)"
     }
   ],
-  publications: [
-    {
-      title: "Real-Time Fire Detection Using Hybrid Feature Extraction: Color, Texture, and Motion Analysis",
-      publisher: "IEEE (MVA 2025)",
-      doi: "10.23919/MVA65244.2025.11175077"
-    },
-    {
-      title: "Real-Time Fire Detection Using Hybrid Feature Extraction: Color, Texture, and Motion Analysis",
-      publisher: "IEICE Proceedings",
-      doi: "10.34385/proc.93.P1-7"
-    },
-    {
-      title: "Feature Fusion for Advancing Land-Use Scene Classification",
-      publisher: "SPIE (ICMVA 2025)",
-      doi: "10.1117/12.3078902"
-    },
-    {
-      title: "Survei Metode-Metode Software Development Life Cycle dengan Metode Systematic Literature Review",
-      publisher: "ILKOMNIKA Journal",
-      doi: "10.28926/ilkomnika.v5i2.447"
-    },
-    {
-      title: "Pemodelan Proses Bisnis Peternakan Ayam Petelur",
-      publisher: "Jurnal INFORMATIKA",
-      doi: "10.35316/jimi.v7i1.49-64"
-    }
-  ],
+  publications: {
+    international: [
+      {
+        title: "Real-Time Fire Detection Using Hybrid Feature Extraction: Color, Texture, and Motion Analysis",
+        publisher: "IEEE (MVA 2025)",
+        doi: "10.23919/MVA65244.2025.11175077"
+      },
+      {
+        title: "Real-Time Fire Detection Using Hybrid Feature Extraction: Color, Texture, and Motion Analysis",
+        publisher: "IEICE Proceedings",
+        doi: "10.34385/proc.93.P1-7"
+      },
+      {
+        title: "Feature Fusion for Advancing Land-Use Scene Classification",
+        publisher: "SPIE (ICMVA 2025)",
+        doi: "10.1117/12.3078902"
+      }
+    ],
+    national: [
+      {
+        title: "Survei Metode-Metode Software Development Life Cycle dengan Metode Systematic Literature Review",
+        publisher: "ILKOMNIKA Journal",
+        doi: "10.28926/ilkomnika.v5i2.447"
+      },
+      {
+        title: "Pemodelan Proses Bisnis Peternakan Ayam Petelur",
+        publisher: "Jurnal INFORMATIKA",
+        doi: "10.35316/jimi.v7i1.49-64"
+      }
+    ]
+  },
   projects: [
     "Data Science Challenge with Python – CT CORP",
     "Data Engineer Challenge with SQL – Xeratic",
