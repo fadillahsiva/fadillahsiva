@@ -283,7 +283,7 @@ function App() {
             {/* Kolom Kanan: Skills Cloud (Tetap dipertahankan agar layout seimbang) */}
             <div className="skills-column-sticky">
               <div className="skills-box">
-                <h3>Technical Arsenal</h3>
+                <h3>Technical Skills</h3>
                 <div className="skills-cloud">
                   {skills.map((skill, index) => (
                     <span key={index} className="skill-tag">{skill}</span>
