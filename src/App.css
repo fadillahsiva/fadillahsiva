@@ -362,14 +362,14 @@ body {
 /* === ILLUSTRATED PUBLICATION CARDS === */
 .pub-grid-illustrated {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Grid responsif 3 kolom */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
-/* Khusus untuk Nasional agar jadi 2 kolom di layar lebar */
+/* CLASS BARU: Memaksa Grid maksimal 2 kolom di layar lebar */
 @media (min-width: 1024px) {
-  .national-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .two-column-grid {
+    grid-template-columns: repeat(2, 1fr); /* Paksa 2 kolom */
   }
 }
 

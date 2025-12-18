@@ -192,17 +192,19 @@ function App() {
           </div>
         </section>
 
-        {/* PUBLICATIONS SECTION - NEW CARD LAYOUT WITH IMAGES */}
+        {/* PUBLICATIONS SECTION */}
         <section id="publications" className="section-padding bg-light">
           <div className="section-header">
             <h2>Selected Publications</h2>
             <div className="line"></div>
           </div>
-                      
+
           {/* International Publications */}
           <div className="pub-subsection">
             <h3 className="subsection-title">International Conferences & Proceedings</h3>
-            <div className="pub-grid-illustrated">
+            
+            {/* TAMBAHKAN CLASS 'two-column-grid' DI SINI */}
+            <div className="pub-grid-illustrated two-column-grid">
               {publications.international.map((pub, index) => (
                 <div key={index} className="pub-card-illustrated">
                   <div className="pub-image-container">
@@ -221,14 +223,16 @@ function App() {
               ))}
             </div>
           </div>
-            
+
           {/* Spacer */}
           <div style={{ height: '3rem' }}></div>
-            
-          {/* National Publications */}
+
+          {/* National Journals */}
           <div className="pub-subsection">
             <h3 className="subsection-title">National Journals</h3>
-            <div className="pub-grid-illustrated national-grid"> {/* Tambah class national-grid */}
+            
+            {/* PASTIKAN CLASS 'two-column-grid' JUGA ADA DI SINI */}
+            <div className="pub-grid-illustrated two-column-grid"> 
               {publications.national.map((pub, index) => (
                 <div key={index} className="pub-card-illustrated">
                   <div className="pub-image-container">
