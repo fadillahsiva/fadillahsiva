@@ -338,3 +338,114 @@ body {
   .profile-img { width: 130px; height: 130px; }
   .grid-2-col { grid-template-columns: 1fr; }
 }
+/* src/App.css (Tambahkan di paling bawah) */
+
+/* === ILLUSTRATED PUBLICATION CARDS === */
+.pub-grid-illustrated {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Grid responsif 3 kolom */
+  gap: 1.5rem;
+}
+
+/* Khusus untuk Nasional agar jadi 2 kolom di layar lebar */
+@media (min-width: 1024px) {
+  .national-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pub-card-illustrated {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden; /* Agar gambar tidak keluar radius */
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column; /* Default di HP: gambar di atas teks */
+  transition: all 0.3s ease;
+}
+
+.pub-card-illustrated:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.pub-image-container {
+  width: 100%;
+  height: 180px; /* Tinggi gambar tetap di HP */
+  overflow: hidden;
+}
+
+.pub-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gambar mengisi area tanpa gepeng */
+  transition: transform 0.3s ease;
+}
+
+.pub-card-illustrated:hover .pub-img {
+  transform: scale(1.05); /* Efek zoom halus saat hover */
+}
+
+.pub-content-wrapper {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Mengisi sisa ruang vertikal */
+}
+
+.pub-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  flex-grow: 1; /* Mendorong meta ke bawah */
+}
+
+.pub-meta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Pastikan selalu di bawah */
+  font-size: 0.9rem;
+}
+
+.pub-publisher {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.view-paper-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.view-paper-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* RESPONSIVE: Ubah jadi Layout Kiri-Kanan di Layar Tablet/Desktop */
+@media (min-width: 768px) {
+  .pub-card-illustrated {
+    flex-direction: row; /* Gambar di kiri, teks di kanan */
+    align-items: stretch;
+  }
+
+  .pub-image-container {
+    width: 200px; /* Lebar gambar tetap */
+    height: auto; /* Tinggi menyesuaikan konten */
+    flex-shrink: 0; /* Jangan mengecil */
+  }
+
+  .pub-content-wrapper {
+    padding: 1.5rem;
+  }
+}

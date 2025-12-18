@@ -1,13 +1,22 @@
 // src/profileData.js
 
+// Gambar Placeholder (Ganti link ini dengan gambar Anda nanti di folder src/assets/)
+// Contoh: import fireImg from './assets/fire-detection.png'; lalu gunakan 'image: fireImg'
+const placeholderFire1 = "https://placehold.co/300x200/e2e8f0/1e293b?text=Fire+Detection+Illust.+1";
+const placeholderFire2 = "https://placehold.co/300x200/e2e8f0/1e293b?text=Fire+Detection+Illust.+2";
+const placeholderMap = "https://placehold.co/300x200/e2e8f0/1e293b?text=Land-Use+Map+Illust.";
+const placeholderSDLC = "https://placehold.co/300x200/e2e8f0/1e293b?text=SDLC+Diagram+Illust.";
+const placeholderFarm = "https://placehold.co/300x200/e2e8f0/1e293b?text=Poultry+Farm+Illust.";
+
 export const profileData = {
   header: {
-    name: "Fadillah Siva",
+    name: "Fadillah Siva, M.Cs.",
     title: "Lecturer | Computer Vision Researcher | AI & LLM Specialist",
     location: "Indonesia",
     emailWork: "fadillahsiva.work@gmail.com",
     emailResearch: "fadillahsiva.research@gmail.com",
     linkedin: "https://linkedin.com/in/fadillah-siva",
+
   },
   about: {
     summary: "I am an Academic and Computer Vision Researcher with a strong foundation in Feature Extraction and Pattern Recognition, currently serving as a Lecturer at Universitas Sebelas Maret (UNS). I graduated Cum Laude with a Master’s degree in Computer Science from Universitas Gadjah Mada (UGM).",
@@ -70,29 +79,34 @@ export const profileData = {
       {
         title: "Real-Time Fire Detection Using Hybrid Feature Extraction: Color, Texture, and Motion Analysis",
         publisher: "IEEE (MVA 2025)",
-        doi: "10.23919/MVA65244.2025.11175077"
+        doi: "10.23919/MVA65244.2025.11175077",
+        image: placeholderFire1 // Tambahkan gambar
       },
       {
         title: "Real-Time Fire Detection Using Hybrid Feature Extraction: Color, Texture, and Motion Analysis",
         publisher: "IEICE Proceedings",
-        doi: "10.34385/proc.93.P1-7"
+        doi: "10.34385/proc.93.P1-7",
+        image: placeholderFire2 // Tambahkan gambar
       },
       {
         title: "Feature Fusion for Advancing Land-Use Scene Classification",
         publisher: "SPIE (ICMVA 2025)",
-        doi: "10.1117/12.3078902"
+        doi: "10.1117/12.3078902",
+        image: placeholderMap // Tambahkan gambar
       }
     ],
     national: [
       {
         title: "Survei Metode-Metode Software Development Life Cycle dengan Metode Systematic Literature Review",
         publisher: "ILKOMNIKA Journal",
-        doi: "10.28926/ilkomnika.v5i2.447"
+        doi: "10.28926/ilkomnika.v5i2.447",
+        image: placeholderSDLC // Tambahkan gambar
       },
       {
         title: "Pemodelan Proses Bisnis Peternakan Ayam Petelur",
         publisher: "Jurnal INFORMATIKA",
-        doi: "10.35316/jimi.v7i1.49-64"
+        doi: "10.35316/jimi.v7i1.49-64",
+        image: placeholderFarm // Tambahkan gambar
       }
     ]
   },
@@ -105,7 +119,7 @@ export const profileData = {
     "Data Science Project: COVID-19 Analysis (Global & ASEAN)"
   ],
   skills: [
-    "Computer Vision", "Deep Learning", "Python (PyTorch/Scikit-Learn)", 
+    "Computer Vision", "Deep Learning", "Python (PyTorch/Scikit-Learn)",
     "R (ggplot2)", "SQL", "Strategic Management", "Lecturing"
   ],
   organization: [

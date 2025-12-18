@@ -192,48 +192,58 @@ function App() {
           </div>
         </section>
 
-        {/* PUBLICATIONS SECTION - UPDATED SPLIT CATEGORY */}
+        {/* PUBLICATIONS SECTION - NEW CARD LAYOUT WITH IMAGES */}
         <section id="publications" className="section-padding bg-light">
           <div className="section-header">
             <h2>Selected Publications</h2>
             <div className="line"></div>
           </div>
-
+                      
           {/* International Publications */}
           <div className="pub-subsection">
             <h3 className="subsection-title">International Conferences & Proceedings</h3>
-            <div className="pub-grid">
+            <div className="pub-grid-illustrated">
               {publications.international.map((pub, index) => (
-                <a key={index} href={`https://doi.org/${pub.doi}`} target="_blank" rel="noreferrer" className="pub-card">
-                  <div className="pub-content">
-                    <h3>{pub.title}</h3>
-                    <div className="pub-meta">
-                      <span className="publisher badge-inter">{pub.publisher}</span>
-                      <span className="doi-link">View Paper <ExternalLink size={14} /></span>
+                <div key={index} className="pub-card-illustrated">
+                  <div className="pub-image-container">
+                    <img src={pub.image} alt={pub.title} className="pub-img" />
+                  </div>
+                  <div className="pub-content-wrapper">
+                    <h3 className="pub-title">{pub.title}</h3>
+                    <div className="pub-meta-container">
+                      <p className="pub-publisher">{pub.publisher}</p>
+                      <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noreferrer" className="view-paper-link">
+                        View Paper <ExternalLink size={14} />
+                      </a>
                     </div>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
           </div>
-
-          {/* Spacer / Divider Kecil */}
+            
+          {/* Spacer */}
           <div style={{ height: '3rem' }}></div>
-
+            
           {/* National Publications */}
           <div className="pub-subsection">
             <h3 className="subsection-title">National Journals</h3>
-            <div className="pub-grid">
+            <div className="pub-grid-illustrated national-grid"> {/* Tambah class national-grid */}
               {publications.national.map((pub, index) => (
-                <a key={index} href={`https://doi.org/${pub.doi}`} target="_blank" rel="noreferrer" className="pub-card">
-                  <div className="pub-content">
-                    <h3>{pub.title}</h3>
-                    <div className="pub-meta">
-                      <span className="publisher badge-nat">{pub.publisher}</span>
-                      <span className="doi-link">View Paper <ExternalLink size={14} /></span>
+                <div key={index} className="pub-card-illustrated">
+                  <div className="pub-image-container">
+                    <img src={pub.image} alt={pub.title} className="pub-img" />
+                  </div>
+                  <div className="pub-content-wrapper">
+                    <h3 className="pub-title">{pub.title}</h3>
+                    <div className="pub-meta-container">
+                      <p className="pub-publisher">{pub.publisher}</p>
+                      <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noreferrer" className="view-paper-link">
+                        View Paper <ExternalLink size={14} />
+                      </a>
                     </div>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
           </div>
