@@ -71,13 +71,20 @@ body {
 
 .mobile-menu-btn { display: none; cursor: pointer; color: var(--primary); }
 
-/* === HERO SECTION === */
+/* src/App.css - PERBAIKAN HERO SECTION */
+
+/* === HERO SECTION (UPDATED) === */
 .hero-section {
-  padding: 8rem 2rem 5rem;
+  /* Padding atas diperbesar agar tidak tertutup navbar */
+  padding: 10rem 1.5rem 6rem; 
   text-align: center;
   position: relative;
   background: radial-gradient(circle at 50% 50%, #eff6ff 0%, #ffffff 100%);
   overflow: hidden;
+  display: flex; /* Gunakan Flexbox untuk centering */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-bg-pattern {
@@ -87,13 +94,25 @@ body {
   z-index: 0;
 }
 
-.hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+/* Hapus max-width: 800px; agar tidak terpotong */
+.hero-content { 
+  position: relative; 
+  z-index: 1; 
+  width: 100%; /* Gunakan lebar penuh */
+  max-width: 1000px; /* Batas maksimal yang lebih aman */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Pastikan semua anak elemen rata tengah */
+}
 
+/* ... Sisa kode di bawahnya biarkan sama (badge, h1, dll) ... */
 .badge {
   background: #dbeafe; color: var(--accent);
   padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600;
   display: inline-block; margin-bottom: 1.5rem;
 }
+/* ... dst ... */
 
 .hero-text h1 {
   font-size: 3.5rem; line-height: 1.1; margin-bottom: 1rem; color: var(--primary);
