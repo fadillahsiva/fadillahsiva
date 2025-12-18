@@ -8,6 +8,9 @@ import placeholderFire2 from './assets/fire2.png';
 import placeholderMap from './assets/land.png';
 import placeholderSDLC from './assets/sdlc.png';
 import placeholderFarm from './assets/petelur.png';
+import plastikImg from './assets/plastik.png';
+import hujanImg from './assets/hujan.png';
+
 
 export const profileData = {
   header: {
@@ -108,6 +111,20 @@ export const profileData = {
         publisher: "Jurnal INFORMATIKA",
         doi: "10.35316/jimi.v7i1.49-64",
         image: placeholderFarm // Tambahkan gambar
+      }
+    ],
+    thesis: [
+      {
+        title: "Feature Fusion Dalam Klasifikasi Jenis Plastik Daur Ulang",
+        publisher: "Tesis Magister (UGM)",
+        link: "https://etd.repository.ugm.ac.id/penelitian/detail/255974",
+        image: plastikImg
+      },
+      {
+        title: "Analisis Hyperparameter Tuning pada performa algoritma KNN dalam memprediksi curah hujan",
+        publisher: "Skripsi Sarjana (UIN Malang)",
+        link: "http://etheses.uin-malang.ac.id/49595/",
+        image: hujanImg
       }
     ]
   },

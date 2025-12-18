@@ -251,6 +251,34 @@ function App() {
               ))}
             </div>
           </div>
+          {/* Spacer */}
+          <div style={{ height: '3rem' }}></div>
+
+          {/* === BAGIAN BARU: THESIS & DISSERTATION === */}
+          <div className="pub-subsection">
+            <h3 className="subsection-title">Thesis & Dissertation</h3>
+            
+            <div className="pub-grid-illustrated two-column-grid">
+              {publications.thesis.map((pub, index) => (
+                <div key={index} className="pub-card-illustrated">
+                  <div className="pub-image-container">
+                    <img src={pub.image} alt={pub.title} className="pub-img" />
+                  </div>
+                  <div className="pub-content-wrapper">
+                    <h3 className="pub-title">{pub.title}</h3>
+                    <div className="pub-meta-container">
+                      <p className="pub-publisher">{pub.publisher}</p>
+                      
+                      {/* Perhatikan: Kita pakai href={pub.link} karena ini URL langsung */}
+                      <a href={pub.link} target="_blank" rel="noreferrer" className="view-paper-link">
+                        View Document <ExternalLink size={14} />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         {/* CERTIFICATIONS & SKILLS SECTION */}
