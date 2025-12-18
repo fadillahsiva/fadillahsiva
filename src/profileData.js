@@ -11,7 +11,7 @@ import placeholderFarm from './assets/petelur.png';
 
 export const profileData = {
   header: {
-    name: "Fadillah Siva, M.Cs.",
+    name: "Fadillah Siva",
     title: "Lecturer | Computer Vision Researcher | AI & LLM Specialist",
     location: "Indonesia",
     emailWork: "fadillahsiva.work@gmail.com",
@@ -111,6 +111,90 @@ export const profileData = {
       }
     ]
   },
+  certificates: [
+    {
+      category: "Professional Projects & Challenges",
+      items: [
+        { title: "Data Science Challenge with Python", issuer: "CT CORP" },
+        { title: "Data Engineer Challenge with SQL", issuer: "Xeratic" },
+        { title: "Data Analyst Project: Business Decision Research", issuer: "DQLab" },
+        { title: "Project: Eksplorasi Data Ritel menggunakan R", issuer: "DQLab" },
+        { title: "Analisis Data COVID-19 di Dunia & ASEAN", issuer: "DQLab" },
+        { title: "Crypto Analysis Project", issuer: "DQLab" }
+      ]
+    },
+    {
+      category: "Applied Data Science Tracks",
+      items: [
+        { title: "Data Science in Finance: Credit Risk Analysis", issuer: "DQLab" },
+        { title: "Data Science in Finance: Dimension Reduction", issuer: "DQLab" },
+        { title: "Customer Churn Prediction using Machine Learning", issuer: "DQLab" },
+        { title: "Data Science in Telco: Data Cleansing", issuer: "DQLab" },
+        { title: "Market Basket Analysis (Retail System)", issuer: "DQLab" },
+        { title: "Customer Segmentation with Python (Part 1 & 2)", issuer: "DQLab" },
+        { title: "A Walk Into Sensory Science", issuer: "DQLab" }
+      ]
+    },
+    {
+      category: "Python Specialization",
+      items: [
+        { title: "Machine Learning with Python for Beginner", issuer: "DQLab" },
+        { title: "Basic Feature Discovering for Machine Learning", issuer: "DQLab" },
+        { title: "Python for Data Professional Beginner (Part 1-3)", issuer: "DQLab" },
+        { title: "Data Visualization with Matplotlib (Part 1 & 2)", issuer: "DQLab" },
+        { title: "Data Manipulation with Pandas (Part 1 & 2)", issuer: "DQLab" },
+        { title: "Storytelling dengan Visualisasi menggunakan Python", issuer: "DQLab" },
+        { title: "Mengolah Data Teks Unstructured dengan REGEX", issuer: "DQLab" },
+        { title: "Mengenal Model Regresi Linear Pada Python", issuer: "DQLab" }
+      ]
+    },
+    {
+      category: "R Language Specialization",
+      items: [
+        { title: "R for Data Professional (Part 1, 2, & 3)", issuer: "DQLab" },
+        { title: "Introduction to Data Science with R", issuer: "DQLab" },
+        { title: "Advanced Data Visualization with ggplot2", issuer: "DQLab" },
+        { title: "Data Visualization using Plotnine", issuer: "DQLab" },
+        { title: "Linear Regression Model with R", issuer: "DQLab" },
+        { title: "Bekerja dengan Data Teks pada R", issuer: "DQLab" },
+        { title: "Data Preparation & Visualization in Data Science using R", issuer: "DQLab" }
+      ]
+    },
+    {
+      category: "SQL & Database Management",
+      items: [
+        { title: "Certificate Database Management", issuer: "Coding Studio" },
+        { title: "Fundamental SQL (SELECT, FUNCTION, GROUP BY)", issuer: "DQLab" },
+        { title: "Fundamental SQL (INNER JOIN, UNION)", issuer: "DQLab" },
+        { title: "Menggunakan Subquery & Operator Logika pada SQL", issuer: "DQLab" },
+        { title: "Menggunakan ORDER BY untuk Mengurutkan Data", issuer: "DQLab" },
+        { title: "Mengolah Data Tanggal dan Jam Dasar dengan MySQL", issuer: "DQLab" }
+      ]
+    },
+    {
+      category: "Statistics & Analytics Foundations",
+      items: [
+        { title: "Certificate Intro To Data Analytics", issuer: "RevoU" },
+        { title: "Data Analysis Fundamental & Tools", issuer: "MySkill" },
+        { title: "Introduction to Data and Data Science", issuer: "365 Data Science" },
+        { title: "Certificate of Data Science Fundamental & Intermediate", issuer: "Coding Studio" },
+        { title: "Statistik: Ukuran Data (Pemusatan & Variasi)", issuer: "DQLab" },
+        { title: "Statistik: Populasi, Sampel, & Distribusi Normal", issuer: "DQLab" },
+        { title: "Mengenal Visualisasi Data Statistik", issuer: "DQLab" }
+      ]
+    },
+    {
+      category: "IT, Web & Network Security",
+      items: [
+        { title: "Certificate of Cyber Security Fundamental", issuer: "Coding Studio" },
+        { title: "Certificate of Computer Network Fundamental", issuer: "Coding Studio" },
+        { title: "Certificate of Digital Marketing Fundamental", issuer: "Coding Studio" },
+        { title: "UI Fundamental Design", issuer: "Coding Studio" },
+        { title: "Java Script & Advanced Java Script", issuer: "Programming Hub" },
+        { title: "IT-Basics", issuer: "Programming Hub" }
+      ]
+    }
+  ],
   projects: [
     "Data Science Challenge with Python – CT CORP",
     "Data Engineer Challenge with SQL – Xeratic",
